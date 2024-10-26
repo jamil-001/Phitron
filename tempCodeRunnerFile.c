@@ -1,1 +1,2 @@
-else
+
+        if(cnt < k){
