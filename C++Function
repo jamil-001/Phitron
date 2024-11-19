@@ -32,4 +32,76 @@ Example:
 int *p = new int;//declare dynamic veriable
 *p = 100;
 cout << *p << endl; }
+i.Static Variable:
+value return korlei value clear oyjai
+example:
 
+/*#include<bits/stdc++.h>
+using namespace std;
+int* p;
+void fun(){
+    int x = 10;
+    p = &x;
+    cout << "Fun ->" << *p << endl;
+    return;
+}
+int main(){
+    fun();
+    cout << "main ->" << *p << endl;
+    return 0;
+}*/
+
+ii. Dynamic Variable 
+# value return korle value take
+exp:
+/* #include<bits/stdc++.h>
+using namespace std;
+int* p;
+void fun(){
+    int* x = new int ;//Dynamic variable
+    *x = 10;
+    p = x;
+    cout << "Fun ->" << *p << endl;
+    return;
+}
+int main(){
+    fun();
+    cout << "main ->" << *p << endl;
+    return 0;
+}*/
+
+iii. Dynamic Array Return from function
+1. Static Array:
+exp:
+#include<bits/stdc++.h>
+using namespace std;
+int* fun(){
+    int a[5];
+    for(int i = 0;i<5;i++){
+        cin >> a[i];
+    }
+    return a;
+}
+int main(){
+   int* x =  fun();  
+   //Not Return Same value;
+    return 0;
+}
+2. Dynamic Array Return from Function
+Exp:
+#include<bits/stdc++.h>
+using namespace std;
+int* fun(){
+    int* x = new int[5];//Declare Dynamic Array
+    for(int i = 0;i<5;i++){
+        cin >> x[i];
+    }
+    return x;
+}
+int main(){
+   int* y =  fun();  
+   for(int i = 0;i<5;i++){
+       cout<<  y[i] << " ";
+    }
+    return 0;
+}  
