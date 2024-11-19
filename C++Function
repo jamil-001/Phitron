@@ -1,11 +1,35 @@
 #Function
+//C++ main Headerfile
+#include<bits/stdc++.h>
+//Set precition dosomiker pore koighor
+*cout << fixed << setprecition(3)<<d<<endl;
+
+//Sort cut ifelse
+//ternary operator
+example:
+int x = 10;
+x%2 == 0 ? cout << "Even\n" : cout << "Odd\n";
+
 //min function
 1. min(a,b);
+
 //max function
-2. max(a,b);
+2. max({a,b,c,d});
+
 //swap function
-3. swap(a,b);
+3. swap({a,b,c,d});
+
 //when we input and output full string use this function
 4. cin.getline(string_name,size_of_string);
+
 //IGNORE inter space
 5. cin.ignore();
+
+//Moduls 2
+@ Dynamic Variable:
+Example:
+{ int x = 10;
+int *p = new int;//declare dynamic veriable
+*p = 100;
+cout << *p << endl; }
+
