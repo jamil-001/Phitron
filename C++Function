@@ -87,6 +87,7 @@ int main(){
    //Not Return Same value;
     return 0;
 }
+
 2. Dynamic Array Return from Function
 Exp:
 #include<bits/stdc++.h>
@@ -105,3 +106,11 @@ int main(){
     }
     return 0;
 }  
+
+//Dynamic variable delete function
+int* a= new int;
+delete a;
+
+//Dynamic Array delete function when this array are alrady uses
+int* a = new int[3];
+delete[] a;
