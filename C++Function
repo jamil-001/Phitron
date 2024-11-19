@@ -1,0 +1,11 @@
+#Function
+//min function
+1. min(a,b);
+//max function
+2. max(a,b);
+//swap function
+3. swap(a,b);
+//when we input and output full string use this function
+4. cin.getline(string_name,size_of_string);
+//IGNORE inter space
+5. cin.ignore();
