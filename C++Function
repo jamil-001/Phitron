@@ -143,3 +143,36 @@ int main(){
     
     return 0;
 }*/
+
+//Syntax of Constructor
+
+#include<bits/stdc++.h>
+using namespace std;
+class Student
+{   public:
+    int roll;
+    int cls;
+    double gpa;
+    Student(int r,int c,double g)///constructor
+    {
+        roll = r;
+        cls = c;
+        gpa = g;
+    }
+};
+int main(){
+    Student Rahim(111,3,3.5);
+    Student Karim(10, 5,4.5);
+    cout << Rahim.roll <<" "<< Rahim.cls << " "<< Rahim.gpa<<endl;
+    cout << Karim.roll <<" "<< Karim.cls << " "<< Karim.gpa<<endl;
+    return 0;
+}
+
+//When we use same variable then we use this & array keyword:
+/* Student(int roll,int cls,double gpa)
+    {
+        (*this).roll = roll;
+        this->cls = cls;
+        this->gpa = gpa;
+    }
+*/
