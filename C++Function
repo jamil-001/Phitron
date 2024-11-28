@@ -168,7 +168,7 @@ int main(){
     return 0;
 }
 
-//When we use same variable then we use this & array keyword of class & object in constructor:
+//When we use same variable then we use this & arrow keyword of class & object in constructor:
 /* Student(int roll,int cls,double gpa)
     {
         (*this).roll = roll;
