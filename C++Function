@@ -229,3 +229,65 @@ int main(){
 }*/
 
 //YES, constructor object return from function...
+
+
+//Manually object create and declare
+
+/*#include<bits/stdc++.h>
+using namespace std;
+class Cricketer
+{
+    public:
+    int jersey_no;
+    string country;
+};
+int main(){
+    Cricketer* dhoni = new Cricketer();
+    dhoni->jersey_no = 7;
+    dhoni->country = "India";
+
+    Cricketer* kohli = dhoni;
+
+    cout << kohli->country <<" "<<kohli->jersey_no <<endl;
+    delete dhoni;
+
+    
+    Cricketer* dhoni = new Cricketer();
+    dhoni->jersey_no = 7;
+    dhoni->country = "india";
+
+    Cricketer* kohli = new Cricketer();
+    kohli->jersey_no = dhoni->jersey_no;
+    kohli->country = dhoni->country;
+
+   
+    delete dhoni;
+  
+    cout<<"Before deleting kholi"<<" "<< kohli->jersey_no<<" "<<kohli->country <<endl;
+    
+    delete kohli;
+    
+    return 0;
+}*/
+
+//Dynamically Allocate Array
+#include<bits/stdc++.h>
+using namespace std;
+int* sortIt(int n){
+    int* arr= new int[n];
+    for(int i=0;i<n;i++){
+        cin >> arr[i];
+    }
+    sort(arr,arr+n,greater<int>());
+    return arr;
+}
+int main(){
+    int n;
+    cin >> n;
+    int* arr =sortIt(n);
+    for(int i=0;i<n;i++){
+        cout <<arr[i]<<" ";
+    }
+    return 0;
+}
+//
