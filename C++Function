@@ -291,3 +291,111 @@ int main(){
     return 0;
 }
 //
+
+
+//Element Access
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s;
+    cin >> s;
+    /*cout << s[4];//for access element*/
+    
+    cout << s.front() <<endl;  //for access frist element
+    cout << s.back() <<endl;  //for access last element 
+    return 0;
+}
+///String Modifier
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+     string s= "Hello world";
+    // s[0]='G'; change element
+     
+    //string s2 = "hi";
+    //s += s2; for string concate
+    // s.append(s2);for string concate
+    //s.push_back('A');for add new element in string
+    //s.size();
+    //s.pop_back();//for delete last element
+    //s.pop_back();
+    //string s2 ="Hi";
+    //s = s2;  for assign string
+    //s.assign("Gello");
+    s.erase();//jodi kali raki taile sob delete kore dei
+    s.erase(3,2);//delete 3 number index start and delete 2 character
+     cout << s <<endl;
+    return 0;
+}
+
+// Iterator like loop
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+     string s= "Hello world";
+    //  for(int i=0;i<s.size();i++){
+    //     cout << s[i] <<endl;
+    //  }
+    // cout << *s.begin() << endl;
+    // cout << *(s.end()-1) << endl;
+    for(auto it = s.begin();it<s.end();it++){
+        cout << *it << endl;
+    }
+    return 0;
+}
+
+//Print with White space 
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int x;
+    cin >> x;
+    string s;
+    cin.ignore();
+    getline(cin,s);
+    cout << x << endl;
+    cout << s << endl;
+    return 0;
+}
+
+//StringStream with extrat word by word
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s;
+    getline(cin,s);
+    stringstream ss(s);
+    string word;
+    int cnt = 0;
+    while(ss >> word){
+        cout << word << " ";
+        cnt++;
+    }
+    cout << cnt << endl;
+    return 0;
+}
+
+//Strign Capacity
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s= "hello";
+    cout << s.size() << endl;  //for string size
+    cout << s.max_size()<<endl;   //for maximum size of string
+    cout << s.capacity() << endl;  // for generating dynamic string capacity
+    s.clear();    //for clear string
+    if(s.empty() == true){   //for check empty or not
+        cout << "Empty" <<endl;
+    }else{
+        cout << "Not Empty"<<endl;
+    } 
+   s.resize(3);// for resize string
+   
+   cout << s <<endl;
+    return 0;
+} 
