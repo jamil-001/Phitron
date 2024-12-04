@@ -399,3 +399,123 @@ int main(){
    cout << s <<endl;
     return 0;
 } 
+
+//Moduls 6
+
+///01-Four Type of string constructor in c++
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    //1
+    //string s ="hello";//regular use string 
+    //2
+    //string s("hello world",4);// first four letter print
+    //3
+    //string s = "hello world";
+    //string t(s,7);// first seven letter remove this string
+    //4
+   // string s(10,'b');// 10th print b;
+    cout << s << endl;
+    return 0;
+}
+
+//02-Sort function use string
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s;
+   cin >> s;
+    sort(s.begin(),s.end());
+    cout << s << endl;
+    return 0;
+}
+
+//03-Range based character by character
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s;
+    cin >> s;
+    //when don't need index then we use range based for loop
+    for(char c : s){
+        cout << c <<endl;
+    }
+    return 0;
+}
+
+//04-stringstream use for extract new word from sentence
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s;
+    getline(cin,s);
+    stringstream ss(s);
+    string word;
+    ss << word;
+    while(ss >> word){
+        reverse(word.begin(),word.end());
+        cout << " " <<word;
+    }
+    return 0;
+}
+
+//05-Functon Inside Class Constructor
+
+#include<bits/stdc++.h>
+using namespace std;
+class Student
+{   
+    public:
+    string name;
+    int roll;
+    int math;
+    int englis;
+    Student(string name,int roll,int math,int englis){
+        this->name = name;
+        this->roll = roll;
+        this->math = math;
+        this->englis = englis;
+    }
+    void total()
+    {
+        cout <<name<<" "<<"Total mark " <<"is "<<math+englis <<endl;
+    }
+
+};
+int main(){
+    Student sakib("sakib ahmod",23,86,90);
+    sakib.total();
+    Student rakib("rakib ahmod",24,80,90);
+    rakib.total();
+
+    return 0;
+}
+
+//06-Dynamic Object Copy
+
+#include<bits/stdc++.h>
+using namespace std;
+class Cricketer
+{
+    public:
+    string country;
+    int jersey;
+    Cricketer(string country,int jersey)
+    {
+        this->country = country;
+        this->jersey = jersey;
+    }
+};
+int main(){
+    Cricketer* dhoni = new Cricketer("india",100);
+    Cricketer* kohli = new Cricketer("india",18);
+     *kohli = *dhoni;
+     delete dhoni;
+    cout << kohli->jersey <<" "<<kohli->country<< endl;
+    //cout << dhoni->jersey <<" "<<dhoni->country<< endl;
+    return 0;
+}
+
