@@ -519,3 +519,124 @@ int main(){
     return 0;
 }
 
+// Array of object input and output newa
+#include<bits/stdc++.h>
+using namespace std;
+class Student
+{
+    public:
+    string name;
+    int roll;
+    int marks;
+};
+int main(){
+    int n;
+    cin >> n;
+    Student a[n];
+    for(int i=0;i<n;i++){
+        cin.ignore();
+        getline(cin,a[i].name);
+       cin>> a[i].roll>> a[i].marks;
+    }
+    for(int i = 0;i<n ;i++){
+        cout << a[i].name << " " << a[i].roll <<" "<<a[i].marks <<endl;
+    }
+    return 0;
+}
+
+// Array of object minimun & maximum find
+#include<bits/stdc++.h>
+using namespace std;
+class Student
+{
+    public:
+    string name;
+    int roll;
+    int mark;
+
+};
+int main(){
+    int n;
+    cin >> n;
+    Student a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i].name >> a[i].roll >> a[i].mark;
+    }
+
+    Student mn;
+    mn.mark = INT_MIN;//FOR MIN = INT_MAX; FOR MAX = INT_MIN;
+    for(int i=0;i<n;i++){
+        if(a[i].mark > mn.mark){//FOR MIN < FOR MAX >
+            mn = a[i];
+        }
+    }
+    cout << mn.name <<" "<< mn.roll << " "<<mn.mark <<endl;
+
+    return 0;
+}
+
+// custom compare function -> roll/mark/name onujai ascending or disending 
+#include<bits/stdc++.h>
+using namespace std;
+class Student
+{
+    public:
+    string name;
+    int roll;
+    int mark;
+};
+bool cmp(Student l, Student r)
+     {
+    if(l.mark >= r.mark){//old version
+            return true;
+        }else{
+            return false;
+        }
+       
+     }
+int main(){
+    int n;
+    cin >> n;
+    Student a[n];
+    for(int i = 0;i< n;i++){
+        cin>> a[i].name >> a[i].roll >> a[i].mark;
+    }
+  
+    sort(a,a+n,cmp);
+    for(int i=0; i <n; i++){
+        cout << a[i].name <<" "<<a[i].roll <<" "<< a[i].mark <<endl;
+    }
+    return 0;
+}
+
+//if mark ewual then we word roll
+#include<bits/stdc++.h>
+using namespace std;
+class Student 
+{
+    public:
+    string name;
+    int roll;
+    int mark;
+};
+bool cmp(Student l,Student r){
+    if(l.mark == r.mark){
+        return l.roll < r.roll;
+    }else{
+        return l.mark > r.mark;
+    }
+    
+}
+int main(){
+    int n;
+    cin >> n;
+    Student a[n];
+    for(int i=0;i<n;i++){
+        cin >> a[i].name >> a[i].roll >> a[i].mark;
+    }
+    sort(a,a+n,cmp);
+    for(int i=0;i<n;i++){
+        cout <<" "<< a[i].name <<" "<< a[i].roll <<" "<< a[i].mark <<endl;
+    }
+    return 0;
+}
