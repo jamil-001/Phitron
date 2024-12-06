@@ -519,7 +519,7 @@ int main(){
     return 0;
 }
 
-// Array of object input and output newa
+//7.1 Array of object input and output newa
 #include<bits/stdc++.h>
 using namespace std;
 class Student
@@ -543,6 +543,16 @@ int main(){
     }
     return 0;
 }
+
+like: input:
+3
+jamil ahmed 
+27 98
+niyaz ahmed
+30 98
+jabel ahmed 
+23 80
+
 
 // Array of object minimun & maximum find
 #include<bits/stdc++.h>
