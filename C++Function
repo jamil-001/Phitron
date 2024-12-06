@@ -615,6 +615,37 @@ int main(){
 
     return 0;
 }
+//sort array of object
+
+#include<bits/stdc++.h>
+using namespace std;
+class Student
+{
+    public:
+    string name;
+    int roll;
+    int mark;
+};
+bool cmp(Student l, Student r){
+    if(l.name < r.name){
+        return true;
+    }else{
+        return false;
+    }
+}
+int main(){
+  int n;
+  cin >> n;
+  Student a[n];
+  for(int i=0;i<n;i++){
+    cin >> a[i].name >> a[i].roll >> a[i].mark;
+  }
+  sort(a,a+n,cmp);
+   for(int i=0;i<n;i++){
+   cout<< a[i].name <<" " << a[i].roll <<" "<< a[i].mark<<endl;
+  }
+    return 0;
+}
 
 // custom compare function -> roll/mark/name onujai ascending or disending 
 #include<bits/stdc++.h>
@@ -680,4 +711,17 @@ int main(){
         cout <<" "<< a[i].name <<" "<< a[i].roll <<" "<< a[i].mark <<endl;
     }
     return 0;
+}
+
+
+//another bool condition for cmp 
+bool cmp(Student l,Student r){
+    if(l.mark > r.mark){
+        return true;
+
+    }else if(l.mark < r.mark){
+        return false;
+    }else{
+        return l.roll < r.roll;
+    }
 }
